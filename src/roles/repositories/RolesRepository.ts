@@ -1,4 +1,4 @@
-import { Role } from '@roles/entities/role'
+import { Role } from '@roles/entities/Role'
 
 type CreateRoleDTO = {
   name: string
