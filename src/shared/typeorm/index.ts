@@ -1,10 +1,11 @@
 import { DataSource } from 'typeorm'
+import { CreateRolesTable1694486577889 } from './migrations/1694486577889-CreateRolesTable'
 
 export const dataSource = new DataSource({
   type: 'sqlite',
   database: './db.sqlite',
   entities: [],
-  migrations: [],
+  migrations: [CreateRolesTable1694486577889],
 })
 
 // export const dataSource = new DataSource({
@@ -14,4 +15,6 @@ export const dataSource = new DataSource({
 //   username: 'tjdeveloper',
 //   password: 'myAPI2023',
 //   database: 'tjdeveloper',
+//   entities: [],
+//   migrations: [CreateRolesTable1694487115306],
 // })
