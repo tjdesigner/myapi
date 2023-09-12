@@ -3,7 +3,7 @@ import cors from 'cors'
 import 'express-async-errors'
 import swaggerUi from 'swagger-ui-express'
 import { routes } from './routes'
-import { AppError } from '../erros/AppError'
+import { AppError } from '../errors/AppError'
 import swaggerFile from '../../swagger.json'
 
 const app = express()

@@ -1,13 +1,21 @@
 import { MigrationInterface, QueryRunner, Table } from 'typeorm'
 
-export class CreateRolesTable1694486577889 implements MigrationInterface {
+export class CreateRolesTable1694531657173 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
         name: 'roles',
         columns: [
-          { name: 'id', type: 'uuid', isPrimary: true },
-          { name: 'name', type: 'string', isUnique: true },
+          {
+            name: 'id',
+            type: 'uuid',
+            isPrimary: true,
+          },
+          {
+            name: 'name',
+            type: 'string',
+            isUnique: true,
+          },
           {
             name: 'created_at',
             type: 'timestamp',
