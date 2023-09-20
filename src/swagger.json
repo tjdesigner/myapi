@@ -60,9 +60,54 @@
         "tags": ["Role"],
         "summary": "List all roles",
         "description": "Returns all roles paginated",
+        "parameters": [
+          {
+            "name":"page",
+            "in": "query",
+            "description":"number of the page",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "example":"page=1"
+            },
+            "style": "label"
+          },
+          {
+            "name":"limit",
+            "in": "query",
+            "description":"number of registers per page",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "example":"mimit=15"
+            },
+            "style": "label"
+          }
+        ],
         "responses": {
           "200": {
-          "description": "Success!"
+          "description": "Success!",
+          "content": {
+            "application/json": {
+              "example":{
+                "per_page": 15,
+                "total": 2,
+                "current_page": 1,
+                "data": [
+                  {
+                    "id": "98d1826b-3cde-4ebb-b9b7-4ef2c473d33d",
+                    "name": "Novo registro",
+                    "created_at": "2023-09-20T14:22:11.000Z"
+                  },
+                  {
+                    "id": "c76f9e77-7b46-4119-aaaa-46c60162813e",
+                    "name": "Novo nome",
+                    "created_at": "2023-09-20T14:30:33.000Z"
+                  }
+                ]
+              }
+            }
+          }
           }
         }
       }
