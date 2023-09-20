@@ -139,7 +139,11 @@
                     "type": "string"
                   }
                 },
-                "example": "Administrator"
+                "example": {
+                  "id": "98d1826b-3cde-4ebb-b9b7-4ef2c473d33d",
+                  "name": "Nome atualizado",
+                  "created_at": "2023-09-20T14:22:11.000Z"
+                }
               }
             }
           }
@@ -162,6 +166,57 @@
                       "type": "string"
                     }
                   }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request."
+          },
+          "404": {
+            "description": "role not found."
+          }
+        }
+      },
+      "get": {
+        "tags": ["Roles"],
+        "summary": "Find role by ID",
+        "description": "Returns roles based on ID",
+        "parameters": [
+          {
+            "name":"id",
+            "in": "path",
+            "description":"deletation of a role",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "style": "label"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success!",
+            "content": {
+              "application/json": {
+                "schema":{
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "example": {
+                  "id": "98d1826b-3cde-4ebb-b9b7-4ef2c473d33d",
+                  "name": "Novo registro",
+                  "created_at": "2023-09-20T14:22:11.000Z"
                 }
               }
             }
